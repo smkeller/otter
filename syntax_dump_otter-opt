@@ -34,7 +34,15 @@ Executioner/TimeStepper
 Functions/*
 GlobalParams
 ICs/*
+ICs/PolycrystalICs
+ICs/PolycrystalICs/BicrystalBoundingBoxIC
+ICs/PolycrystalICs/BicrystalCircleGrainIC
+ICs/PolycrystalICs/PolycrystalHexGrainIC
+ICs/PolycrystalICs/PolycrystalRandomIC
+ICs/PolycrystalICs/PolycrystalVoronoiIC
+ICs/PolycrystalICs/Tricrystal2CircleGrainsIC
 Kernels/*
+Kernels/PolycrystalKernel
 Materials/*
 Mesh
 Mesh
@@ -57,3 +65,4 @@ Variables/*
 Variables/*
 Variables/*
 Variables/*/InitialCondition
+Variables/PolycrystalVariables

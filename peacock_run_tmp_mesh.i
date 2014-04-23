@@ -1,14 +1,14 @@
 [Mesh]
   # uniform_refine = 2
   type = GeneratedMesh
-  dim = 3
+  dim = 2
   nx = 60
   ny = 60
-  nz = 8
+  nz = 0
   xmax = 100
   ymax = 100
-  zmax = 10
-  elem_type = PRISM6
+  zmax = 0
+  elem_type = QUAD4
 []
 
 [Variables]
@@ -40,14 +40,6 @@
     type = CHMath
     variable = c
     mob_name = M
-  [../]
-[]
-
-[BCs]
-  [./Periodic]
-    [./all]
-      auto_direction = 'x y'
-    [../]
   [../]
 []
 
