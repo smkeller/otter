@@ -55,8 +55,8 @@ InputParameters validParams<OtterApp>()
 OtterApp::OtterApp(const std::string & name, InputParameters parameters) :
     MooseApp(name, parameters)
 {
-  srand(libMesh::processor_id());
-  
+  srand(processor_id());
+
   Moose::registerObjects(_factory);
   OtterApp::registerObjects(_factory);
 
@@ -79,7 +79,7 @@ OtterApp::registerObjects(Factory & factory)
 {
   registerKernel(DiffusionSK);
   registerKernel(ConvectionSK);
-  
+
 // Stuff from PhaseFieldApp
   registerKernel(MatDiffusion);
   registerKernel(ACInterface);
@@ -140,6 +140,3 @@ OtterApp::associateSyntax(Syntax & syntax, ActionFactory & action_factory)
   // End of stuff from PhaseFieldApp
 
 }
-
-
-
