@@ -96,26 +96,12 @@
   dt = 1.0
   end_time = 1000.
 []
-
-[Adaptivity]
-  initial_adaptivity = 2
-  refine_fraction = 0.75
-  coarsen_fraction = 0.1
-  max_h_level = 5
-  [./Indicators]
-    [./grad_jump]
-      type = GradientJumpIndicator
-      variable = c
-    [../]
-  [../]
-  [./Markers]
-    [./val_mark]
-      type = ErrorFractionMarker
-      indicator = grad_jump
-    [../]
-  [../]
-[]
-
+[./Adaptivity]
+    initial_adaptivity = 2
+    refine_fraction = 0.75
+    coarsen_fraction = 0.1
+    max_h_level = 5
+[../]
 [Outputs]
   # console = true
   file_base = box
