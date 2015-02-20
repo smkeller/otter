@@ -68,6 +68,7 @@ OtterApp::~OtterApp()
 {
 }
 
+extern "C" void OtterApp__registerApps() { OtterApp::registerApps(); }
 void
 OtterApp::registerApps()
 {
