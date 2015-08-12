@@ -21,8 +21,8 @@ InputParameters validParams<ConvectionSK>()
 }
 
 
-ConvectionSK::ConvectionSK(const std::string & name, InputParameters parameters)
-  :Kernel(name, parameters),
+ConvectionSK::ConvectionSK(const InputParameters & parameters)
+  :Kernel(parameters),
   _grad_var(coupledGradient("grad_velocity"))
 /*   _component(getParam<unsigned int>("component")),
    _xdisp_coupled(isCoupled("disp_x")),

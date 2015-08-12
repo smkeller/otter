@@ -13,7 +13,7 @@ class ConvectionSK : public Kernel
 {
 public:
 
-  ConvectionSK(const std::string & name, InputParameters parameters);
+  ConvectionSK(const InputParameters & parameters);
 
 protected:
   virtual Real computeQpResidual();

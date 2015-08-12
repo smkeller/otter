@@ -11,7 +11,7 @@ InputParameters validParams<OtterApp>();
 class OtterApp : public MooseApp
 {
 public:
-  OtterApp(const std::string & name, InputParameters parameters);
+  OtterApp(InputParameters parameters);
   virtual ~OtterApp();
 
   static void registerApps();

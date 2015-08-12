@@ -52,10 +52,9 @@ InputParameters validParams<OtterApp>()
   return params;
 }
 
-OtterApp::OtterApp(const std::string & name, InputParameters parameters) :
-    MooseApp(name, parameters)
+OtterApp::OtterApp(InputParameters parameters) :
+    MooseApp(parameters)
 {
-  srand(processor_id());
 
   Moose::registerObjects(_factory);
   OtterApp::registerObjects(_factory);
