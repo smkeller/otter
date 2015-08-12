@@ -13,7 +13,7 @@ class DiffusionSK : public Kernel
 {
 public:
 
-  DiffusionSK(const std::string & name, InputParameters parameters);
+  DiffusionSK(const InputParameters & parameters);
 
 protected:
   virtual Real computeQpResidual();
