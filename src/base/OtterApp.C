@@ -5,7 +5,7 @@
 #include "CHInterface.h"
 #include "SplitCHWRes.h"
 #include "SplitCHMath.h"
-#include "CoupledImplicitEuler.h"
+//#include "CoupledImplicitEuler.h"
 #include "CrossIC.h"
 #include "SmoothCircleIC.h"
 #include "RndSmoothCircleIC.h"
@@ -14,8 +14,8 @@
 #include "SpecifiedSmoothCircleIC.h"
 #include "RndBoundingBoxIC.h"
 #include "PFMobility.h"
-#include "NodalFloodCount.h"
-#include "NodalFloodCountAux.h"
+//#include "NodalFloodCount.h"
+//#include "NodalFloodCountAux.h"
 #include "NodalVolumeFraction.h"
 #include "BndsCalcAux.h"
 #include "ACGrGrPoly.h"
@@ -52,8 +52,8 @@ InputParameters validParams<OtterApp>()
   return params;
 }
 
-OtterApp::OtterApp(const std::string & name, InputParameters parameters) :
-    MooseApp(name, parameters)
+OtterApp::OtterApp(InputParameters parameters) :
+    MooseApp(parameters)
 {
   srand(processor_id());
 
@@ -88,7 +88,7 @@ OtterApp::registerObjects(Factory & factory)
   registerKernel(CHInterface);
   registerKernel(SplitCHWRes);
   registerKernel(SplitCHMath);
-  registerKernel(CoupledImplicitEuler);
+//  registerKernel(CoupledImplicitEuler);
   registerKernel(ACGrGrPoly);
   registerKernel(ACGBPoly);
   registerInitialCondition(CrossIC);
@@ -105,8 +105,8 @@ OtterApp::registerObjects(Factory & factory)
   registerInitialCondition(Tricrystal2CircleGrainsIC);
   registerMaterial(PFMobility);
   registerMaterial(GBEvolution);
-  registerUserObject(NodalFloodCount);
-  registerAux(NodalFloodCountAux);
+//  registerUserObject(NodalFloodCount);
+//  registerAux(NodalFloodCountAux);
   registerAux(BndsCalcAux);
 //  registerAux(SPPARKSAux);
   registerUserObject(NodalVolumeFraction);

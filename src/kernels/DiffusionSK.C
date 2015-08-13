@@ -20,8 +20,8 @@ InputParameters validParams<DiffusionSK>()
 }
 
 
-DiffusionSK::DiffusionSK(const std::string & name, InputParameters parameters)
-  :Kernel(name, parameters)
+DiffusionSK::DiffusionSK(InputParameters parameters)
+  :Kernel(parameters)
 /*   _component(getParam<unsigned int>("component")),
    _xdisp_coupled(isCoupled("disp_x")),
    _ydisp_coupled(isCoupled("disp_y")),
