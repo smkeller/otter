@@ -55,7 +55,6 @@ InputParameters validParams<OtterApp>()
 OtterApp::OtterApp(InputParameters parameters) :
     MooseApp(parameters)
 {
-  srand(processor_id());
 
   Moose::registerObjects(_factory);
   OtterApp::registerObjects(_factory);

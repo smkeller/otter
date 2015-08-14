@@ -20,7 +20,11 @@ InputParameters validParams<DiffusionSK>()
 }
 
 
+<<<<<<< HEAD
 DiffusionSK::DiffusionSK(InputParameters parameters)
+=======
+DiffusionSK::DiffusionSK(const InputParameters & parameters)
+>>>>>>> eb5c587727e6cec7236a570f702dfabe86f4b017
   :Kernel(parameters)
 /*   _component(getParam<unsigned int>("component")),
    _xdisp_coupled(isCoupled("disp_x")),

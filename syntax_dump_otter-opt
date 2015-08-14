@@ -3,7 +3,6 @@ Adaptivity/Indicators/*
 Adaptivity/Indicators/*
 Adaptivity/Markers/*
 Adaptivity/Markers/*
-AuxBCs/*
 AuxKernels/*
 AuxScalarKernels/*
 AuxVariables/*
@@ -16,8 +15,6 @@ BCs/Periodic/*
 Bounds
 Bounds/*
 Constraints/*
-CoupledProblems/*
-CoupledProblems/*/*
 DGKernels/*
 Dampers/*
 Debug
@@ -29,6 +26,7 @@ Executioner
 Executioner/Adaptivity
 Executioner/Predictor
 Executioner/Quadrature
+Executioner/TimeIntegrator
 Executioner/TimePeriods/*
 Executioner/TimeStepper
 Functions/*
@@ -56,6 +54,7 @@ Outputs/*
 Postprocessors/*
 Postprocessors/*
 Preconditioning/*
+Problem
 Problem
 ScalarKernels/*
 Splits/*

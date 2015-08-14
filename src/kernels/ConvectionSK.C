@@ -21,7 +21,11 @@ InputParameters validParams<ConvectionSK>()
 }
 
 
+<<<<<<< HEAD
 ConvectionSK::ConvectionSK(InputParameters parameters)
+=======
+ConvectionSK::ConvectionSK(const InputParameters & parameters)
+>>>>>>> eb5c587727e6cec7236a570f702dfabe86f4b017
   :Kernel(parameters),
   _grad_var(coupledGradient("grad_velocity"))
 /*   _component(getParam<unsigned int>("component")),
