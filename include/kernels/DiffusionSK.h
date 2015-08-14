@@ -12,13 +12,7 @@ InputParameters validParams<DiffusionSK>();
 class DiffusionSK : public Kernel
 {
 public:
-
-<<<<<<< HEAD
   DiffusionSK(InputParameters parameters);
-=======
-  DiffusionSK(const InputParameters & parameters);
->>>>>>> eb5c587727e6cec7236a570f702dfabe86f4b017
-
 protected:
   virtual Real computeQpResidual();
 
